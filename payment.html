@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paymentform</title>
+
+</head>
+<style>
+    body{
+        color:aliceblue;
+    }
+    .background {
+        background-image: url(bg2.jpg);
+        background-repeat: no-repeat;
+        height: 120vh;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+    }
+    textarea , ::placeholder{
+        background-color: transparent;
+        background-size: cover;
+        color: #fff;
+    }
+    p,h1,h2,legend{
+        text-transform: capitalize;
+        text-shadow: 3px 2px black;
+    }
+    
+    
+</style>
+<body>
+    
+    <div class="background" >
+    <form action="" style="padding-left: 3%;">
+        <h1 style="text-align: center; font-size: 60px;">Payment Form</h1>
+        <h2>Contact information</h2>
+        <p>Name: <input type="text" name="name" required></p>
+        <p>
+            <fieldset style="width: 10%;">
+                <legend>Gender</legend>
+                    Male <input type="radio" name="gender" id="male">
+                    Female <input type="radio" name="gender" id="Female">
+            </fieldset >
+        </p>
+        <p><fieldset style="width: 50%;">
+                <legend> Address</legend>
+                    <textarea name="address" placeholder="please enter your address" id="address" cols="100" rows="10" required></textarea>
+                </fieldset>
+        </p>
+        <p>
+            <legend>Email</legend>
+                <input type="email"  name="email" id="email" required>
+        </p>
+        <p>
+            <legend>Pincode</legend>
+                <input type="number" name="pincode" id="pincode">
+        </p>
+        <h2>Payment information</h2>
+        <p>Card Type:
+            <select name="card_type" id="card_type" required>
+                <option value="">--Select a Card Type--</option>
+                <option value="visa">visa</option>
+                <option value="rupay">rupay</option>
+                <option value="master card">master card</option>
+            </select>
+        </p>
+        <p>
+            card number <input type="number" name="card number" id="card number">
+        </p>
+        <p>
+            expiry date: <input type="date" name="exp_date" id="exp_date">
+        </p>
+        <p>CVV <input type="password" name="cvv" id="cvv" required></p>
+        <label for="terms">
+            <input type="checkbox" name="terms" id="" required> I understand the tems and conditions
+        </label>
+        <br><br>
+        <input type="submit" value="pay now">
+
+    </form>
+</div>
+    
+</body>
+</html>
